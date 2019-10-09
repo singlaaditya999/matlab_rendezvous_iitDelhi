@@ -1,0 +1,10 @@
+I=imread('peppers.png');
+figure(1),imshow(I);
+F=rgb2gray(I);
+figure(2),imshow(F);
+B=im2double(imread('peppers.png'));
+R=graythresh(B);
+G=im2bw(B,R);
+figure(3),imshow(G);
+D=imadjust(B,[0 1],[1 0]);
+figure(4),imshow(D);

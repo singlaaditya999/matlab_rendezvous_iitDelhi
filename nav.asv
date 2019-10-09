@@ -1,0 +1,25 @@
+a=videoinput('winvideo',1,'YUY2_640X480');
+start(a);
+preview(a);
+range=35;
+while 1
+    t_r=a(:,:,1);
+    t_b=a(:,:,3);
+    t_g=a(:,:,2);
+    for x=1:480
+        for y=1:640
+if (t_r(x,y)==253+range||t_r(x,y)==253-range)&&(t_g(x,y)==255+range||t_g(x,y)==255-range)&&(t_b(x,y)==255+range||t_b(x,y)==255-range)
+    imshow(i);
+end
+if (t_r(x,y)==100+range||t_r(x,y)==100-range)&&(t_g(x,y)==153+range||t_g(x,y)==153-range)&&(t_b(x,y)==254+range||t_b(x,y)==254-range)
+     imshow(j);
+end
+if (t_r(x,y)==100+range||t_r(x,y)==253-range)&&(t_g(x,y)==255+range||t_g(x,y)==255-range)&&(t_b(x,y)==255+range||t_b(x,y)==255-range)
+     imshow(k);
+end
+if (t_r(x,y)==253+range||t_r(x,y)==253-range)&&(t_g(x,y)==255+range||t_g(x,y)==255-range)&&(t_b(x,y)==255+range||t_b(x,y)==255-range)
+    imshow(l);
+end
+        end
+    end
+end

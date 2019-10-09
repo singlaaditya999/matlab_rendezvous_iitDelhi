@@ -1,0 +1,9 @@
+%s = serial('COM9','BaudRate',9600);
+%fopen(s);
+%fprintf(s,'A');
+%fclose(s);
+%delete(s)
+%clear s
+s = serial('COM11');
+fopen(s);
+fprintf(s,'RS232?');
