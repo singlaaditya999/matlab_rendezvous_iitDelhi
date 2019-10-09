@@ -1,0 +1,9 @@
+clc
+clear all;
+close all;
+n=input('Enter the no of cycle');
+f=input('Enter the frequency ');
+x=0:0.0001:n/f
+y=sin(2*pi*f*n)
+plot(x,y)
+hold on;

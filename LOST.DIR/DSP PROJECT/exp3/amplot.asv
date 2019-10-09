@@ -1,0 +1,29 @@
+clc;
+close all;
+clear all;
+xn= input('Enter the input sequence: ');
+l=length(xn);
+n=9^l;
+xk=fft(xn,n);
+
+
+
+
+
+xmag=abs(xk);
+xph=angle(xk);
+subplot(3,1,1);
+stem(xn);
+xlabel('n');
+ylabel('x(n)');
+title('Input Sequence:');
+subplot(3,1,2);
+stem(xmag);
+xlabel('w');
+ylabel('|X(w)|');
+title('Magnitude Plot');
+subplot(3,1,3);
+stem(xph);
+xlabel('w');
+ylabel('<X(w)');
+title('Phase Plot');
