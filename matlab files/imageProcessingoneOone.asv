@@ -1,0 +1,7 @@
+img=imread('Screenshot (3).png');
+dim=size(img);
+figure;
+imshow(img);
+k=grey2bw('Screenshot (3).png');
+figure
+imshow(k);
